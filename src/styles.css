@@ -1,1 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Personalización del color primario de Bootstrap - Amarillo Pálido con toque Naranja */
+:root {
+  --bs-primary: #ffe8cc;
+  --bs-primary-rgb: 255, 232, 204;
+  --bs-primary-text-emphasis: #ccbaa3;
+  --bs-primary-bg-subtle: #fffaf5;
+  --bs-primary-border-subtle: #fff4e6;
+}
+
+/* Asegurar que los botones y elementos con clase btn-primary usen el nuevo color */
+.btn-primary {
+  --bs-btn-color: #333;
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: #ffd9b3;
+  --bs-btn-hover-color: #333;
+  --bs-btn-hover-bg: #ffe0b8;
+  --bs-btn-hover-border-color: #ffcc99;
+  --bs-btn-focus-shadow-rgb: 255, 232, 204;
+  --bs-btn-active-color: #333;
+  --bs-btn-active-bg: #ffd9b3;
+  --bs-btn-active-border-color: #ffcc99;
+  --bs-btn-disabled-color: #666;
+  --bs-btn-disabled-bg: var(--bs-primary);
+  --bs-btn-disabled-border-color: #ffd9b3;
+}
+
+/* Botones outline-primary */
+.btn-outline-primary {
+  --bs-btn-color: #333;
+  --bs-btn-border-color: #ffd9b3;
+  --bs-btn-hover-color: #333;
+  --bs-btn-hover-bg: var(--bs-primary);
+  --bs-btn-hover-border-color: #ffd9b3;
+  --bs-btn-focus-shadow-rgb: 255, 232, 204;
+  --bs-btn-active-color: #333;
+  --bs-btn-active-bg: var(--bs-primary);
+  --bs-btn-active-border-color: #ffd9b3;
+  --bs-btn-disabled-color: #999;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #ffd9b3;
+}
+
+/* Texto con color primario */
+.text-primary {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
+}
+
+/* Fondo con color primario */
+.bg-primary {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+}
+
+/* Border con color primario */
+.border-primary {
+  --bs-border-opacity: 1;
+  border-color: rgba(var(--bs-primary-rgb), var(--bs-border-opacity)) !important;
+}
