@@ -1,4 +1,4 @@
-# Three Click
+# JoseMiels
 
 Phone service and shop for Apple products. First landing page and inside in route "/shop" the e-commerce.
 
