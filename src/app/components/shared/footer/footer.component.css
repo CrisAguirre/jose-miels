@@ -6,3 +6,17 @@
 .footer-brand-name {
     font-size: 2em;
 }
+
+@media screen and (max-width: 768px) {
+    .footer-mobile-center {
+        text-align: center;
+    }
+    
+    .footer-mobile-center .d-flex {
+        align-items: center !important;
+    }
+    
+    .footer-mobile-center .nav {
+        align-items: center !important;
+    }
+}

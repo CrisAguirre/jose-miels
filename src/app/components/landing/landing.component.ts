@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./landing.component.css']
 })
 export class LandingComponent {
-  phoneNumber = '573137733408';
+  phoneNumber = '573188716552';
   defaultMessage = 'Estoy interesado en sus productos';
 
   openWhatsApp(): void {

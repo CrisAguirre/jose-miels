@@ -201,4 +201,12 @@ iframe{
         width: 40px;
         margin-right: 1em;
     }
+    .navbar-toggler {
+        display: block !important;
+    }
+    .navbar-collapse {
+        background-color: #212529;
+        padding: 1rem;
+        margin-top: 0.5rem;
+    }
 }
