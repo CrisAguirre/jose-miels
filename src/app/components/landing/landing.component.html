@@ -66,21 +66,21 @@
     <div class="container-fluid container">
       <img src="../../assets/img/public/logo.png" loading="lazy" class="logo-navbar">
       <a class="navbar-brand h1 mt-1 text-light" routerLink="/">José Miel's</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active text-light" aria-current="page" href="#features">Productos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active text-light" aria-current="page" href="#prices">Nuestros Procesos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active text-light" aria-current="page" routerLink="#contact">Contacto</a>
+            <a class="nav-link active text-light" aria-current="page" href="#prices">Precios</a>
           </li>
         </ul>
         <form class="d-flex">
-          <a routerLink="./shop">
-            <button class="btn btn-primary" type="button">Tienda</button>
+          <a routerLink="/contacto">
+            <button class="btn btn-primary" type="button">Pedidos</button>
           </a>
         </form>
       </div>
@@ -94,11 +94,11 @@
       <!-- <img src="../../assets/img/public/0.jpg" loading="lazy"> -->
     </div>
     <div class="col-lg-6 center-important p-4 hero-content-text">
-      <h1 class="display-5 fw-bold lh-1 mb-3 text-white">José Miel's</h1>
-      <p class="lead text-white">Miel de Abejas</p>
+      <h1 class="display-5 fw-bold lh-1 mb-3 text-white hero-title">José Miel's</h1>
+      <p class="lead text-white fw-semibold">Miel de Abejas Artesanal</p>
       <div class="d-grid pb-5 gap-2 d-md-flex justify-content-md-start">
-        <a type="button" class="btn btn-primary btn-lg px-4 me-md-2" href="shop">Comprar</a>
-        <a type="button" class="btn btn-outline-secondary btn-lg px-4" href="#features">Productos</a>
+        <a type="button" class="btn btn-primary btn-lg px-4 me-md-2" (click)="openWhatsApp()" style="cursor: pointer;">Comprar</a>
+        <a type="button" class="btn btn-lg px-4 btn-hero-products" href="#features">Productos</a>
       </div>
     </div>
   </div>
@@ -109,24 +109,24 @@
       <h2 class="border-bottom pb-2 pt-4">Productos</h2>
       <div class="row g-4 py-4 row-cols-1 row-cols-lg-3">
           <div class="feature col">
-              <div class="feature-icon d-inline-flex align-items-center justify-content-center  fs-2 mb-4">
-                <img src="../../assets/img/public/logo.png" loading="lazy" class="logo-navbar">
+              <div class="feature-icon d-flex align-items-center justify-content-center fs-2 mb-4 w-100">
+                <img src="../../assets/img/public/3.png" loading="lazy" class="product-bottle-image">
               </div>
-              <h3 class="fs-2">Miel de Abejas Tradicional (Grande)</h3>
+              <h3 class="fs-2 text-center">Miel de Abejas Tradicional (Grande)</h3>
               <p>Nuestra miel tradicional grande es la elección perfecta para familias o para quienes disfrutan de la miel en su día a día. Cosechada de una variedad de flores silvestres, cada frasco contiene un perfil de sabor único que captura la esencia de la temporada. Es ideal para endulzar bebidas, acompañar postres o simplemente disfrutarla a cucharadas.</p>
           </div>
           <div class="feature col">
-              <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-4">
-                <img src="../../assets/img/public/logo.png" loading="lazy" class="logo-navbar">
+              <div class="feature-icon d-flex align-items-center justify-content-center fs-2 mb-4 w-100">
+                <img src="../../assets/img/public/2.png" loading="lazy" class="product-bottle-image">
               </div>
-              <h3 class="fs-2">Miel de Abejas Tradicional (Pequeña)</h3>
+              <h3 class="fs-2 text-center">Miel de Abejas Tradicional (Pequeña)</h3>
               <p>La versión pequeña de nuestra miel tradicional es perfecta para regalar o para probar por primera vez nuestro delicioso producto. Su sabor delicado y su dulzura sutil la hacen un complemento ideal para tés, yogures y frutas. Una pequeña joya de la naturaleza en un frasco conveniente.</p>
           </div>
           <div class="feature col">
-              <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-4">
-                <img src="../../assets/img/public/logo.png" loading="lazy" class="logo-navbar">
+              <div class="feature-icon d-flex align-items-center justify-content-center fs-2 mb-4 w-100">
+                <img src="../../assets/img/public/1.png" loading="lazy" class="product-bottle-image">
               </div>
-              <h3 class="fs-2">Propóleo Natural</h3>
+              <h3 class="fs-2 text-center">Propóleo Natural</h3>
               <p>El propóleo es una de las sustancias más fascinantes producidas por las abejas. Lo utilizan para sellar y proteger la colmena gracias a sus potentes propiedades. Nuestro extracto de propóleo es 100% natural, ideal para fortalecer el sistema inmunológico y como remedio natural para afecciones de garganta. Un verdadero tesoro de la colmena.</p>
           </div>
       </div>
@@ -139,7 +139,7 @@
 <!-- prices -->
 <div class="container" id="prices">
     <div class="pricing-header p-1 pb-md-1 text-center mt-4 px-4" >
-      <h1 class="display-4 fw-normal">Pricing</h1>
+      <h1 class="display-4 fw-normal">Precios</h1>
       <p class="fs-5 text-muted ms-1 me-1">Select the best plan for your mobile lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </div>
     <div class="row row-cols-1 row-cols-md-3 text-center p-3 pb-4 pricing-margin ">
@@ -219,39 +219,5 @@
       <img src="../../assets/img/public/slide.png" alt="Slide">
     </div>
   </div>
-</div>
-<!-- contact -->
-<div class="container-fluid p-0 m-0 bg-dark pb-1 px-4" id="contact">
-<div class="container pt-0 pb-5  contact-container text-bg-dark " id="contact">
-  <h2 class="pb-2 pt-5 border-bottom mb-4">Contact</h2>
-  <div class="row">
-    <div class="col-sm-12 col-lg-6">
-      <div>
-        <form class="mb-2">
-          <div class="input-group mb-3">
-            <span class="input-group-text w-25">Name</span>
-            <input type="name" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-          </div>
-          <div class="input-group mb-3 ">
-            <span class="input-group-text w-25">Surname</span>
-            <input type="surname" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-          </div>
-          <div class="input-group mb-3">
-            <span class="input-group-text w-25">Email</span>
-            <input type="email" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-          </div>
-          <div class="input-group pb-3">
-            <span class="input-group-text w-25">Text</span>
-            <textarea class="form-control" aria-label="With textarea" required></textarea>
-          </div>
-          <input class="btn btn-primary w-100" type="submit" value="Submit">
-      </form>                                
-      </div>
-    </div>
-    <div class="col-sm-12 col-lg-6 mb-2">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48367.09508183037!2d-74.07130696874997!3d40.74126999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f0741ceda7%3A0x4fd23cddb7a3d144!2sApple%20Fifth%20Avenue!5e0!3m2!1sen!2sar!4v1662748665881!5m2!1sen!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </div>
-</div>
 </div>
 <app-footer></app-footer>

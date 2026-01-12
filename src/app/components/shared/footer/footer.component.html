@@ -1,38 +1,47 @@
 <!-- footer -->
-<div class="container container-fluid container-footer overflow-hidden">
-    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-3 my-3">
-        <div class="col m-2">
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2">
-              <a class="nav-link p-0 text-muted" href="#prices">Prices</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a class="nav-link p-0 text-muted" href="#features">Features</a>
-            </li>
-            <li class="nav-item mb-2">
-              <a class="nav-link p-0 text-muted" href="#contact">Contact</a>
-            </li>
-          </ul>
+<div class="container-fluid container-footer overflow-hidden bg-dark">
+    <div class="container">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-6 py-3 my-3 text-white">
+            <div class="col m-2"></div>
+            <div class="col m-2">
+              <div class="d-flex flex-column align-items-start">
+                <img src="../../assets/img/public/logo.png" loading="lazy" class="logo-footer">
+                <p class="text-white mt-2 mb-0">
+                  <span class="footer-brand-name">José Miel's</span><br>
+                  Miel de Abejas Artesanal
+                </p>
+              </div>
+            </div>
+            <div class="col m-2">
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                  <a class="nav-link p-0 text-light" href="#features">Productos</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a class="nav-link p-0 text-light" href="#prices">Precios</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col m-2">
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                  <a class="text-light nav-link p-0 text-light" (click)="openWhatsApp()" style="cursor: pointer;">Pedidos</a>
+                </li>
+              </ul>
+            </div>
+        </footer>
+    </div>
+</div>
+<!-- Footer delgado -->
+<div class="container-fluid bg-white border-top">
+    <div class="container">
+        <div class="text-center py-2">
+            <p class="text-dark mb-0 footer-thin-text">
+                <span class="d-block d-md-inline">José Miel's - Miel de Abejas &copy; 2025</span>
+                <span class="d-block d-md-inline"> - Todos los derechos reservados</span>
+                <span class="d-block d-md-inline"> - Registro Invima No. 1234567890</span>
+                <span class="d-block d-md-inline"> - Registro Sanitario No. 1234567890</span>
+            </p>
         </div>
-        <div class="col m-2">
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2">
-                <a class="text-muted" target="_blank" class="nav-link p-0 text-muted">José Miel's - Miel de Abejas &copy; 2025</a>
-              </li>
-              <!--<li class="nav-item mb-2">
-                <a href="https://joaquinmetayer.com/" target="_blank" class="nav-link p-0 text-muted">Joaquin Metayer</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="https://github.com/joaquinmetayer/threeclick" target="_blank" class="nav-link p-0 text-muted">See code here</a>
-              </li>-->
-            </ul>
-        </div>
-        <div class="col m-2">
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2">
-              <a class="text-muted" class="nav-link p-0 text-muted" routerLink="/shop">Shop</a>
-            </li>
-          </ul>
-        </div>
-    </footer>
+    </div>
 </div>

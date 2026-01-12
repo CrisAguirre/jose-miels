@@ -1,13 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-contacto',
+  templateUrl: './contacto.component.html',
+  styleUrls: ['./contacto.component.css']
 })
-export class AppComponent {
+export class ContactoComponent implements OnInit {
   phoneNumber = '573137733408';
   defaultMessage = 'Estoy interesado en sus productos';
+
+  constructor() { }
+
+  ngOnInit(): void {
+    this.openWhatsApp();
+  }
 
   openWhatsApp(): void {
     // Detectar si es dispositivo móvil
@@ -25,7 +31,14 @@ export class AppComponent {
       whatsappUrl = `https://wa.me/${this.phoneNumber}?text=${encodedMessage}`;
     }
     
-    // Abrir WhatsApp en nueva ventana/pestaña
-    window.open(whatsappUrl, '_blank');
+    // Abrir WhatsApp
+    window.location.href = whatsappUrl;
+    
+    // Si no se abre la app en móvil, redirigir a WhatsApp Web después de un breve delay
+    if (isMobile) {
+      setTimeout(() => {
+        window.location.href = `https://wa.me/${this.phoneNumber}?text=${encodedMessage}`;
+      }, 500);
+    }
   }
 }
